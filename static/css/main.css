@@ -1,0 +1,61 @@
+body {
+    background-color: #8A8C8E;
+}
+
+#main {
+    width: 800px;
+    background-color: #EBEBEC;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    box-shadow: 0px 4px 30px #222;
+    -moz-box-shadow: 0px 4px 30px #222;
+    -webkit-box-shadow: 0px 4px 30px #222;
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav {
+    display: inline-block;
+    float: left;
+    height: 400px;
+    width: 186px;
+    font: 40px/60px 'CabinRegular', Arial, sans-serif;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    font: 40px/60px 'CabinBoldItalic', Arial, sans-serif;
+}
+
+.content {
+    display: inline-block;
+    height: 400px;
+    font: 18px/27px 'CabinRegular', Arial, sans-serif;
+}
+
+#nav .active {
+    font: 40px/60px 'CabinBoldItalic', Arial, sans-serif;
+}
+
+#nav {
+    padding-right: 30px;
+    border-right: 2px solid black;
+}
+
+#footer {
+    text-align: center;
+    padding-top: 13px;
+    font: 14px/14px 'ColaborateLightRegular', Arial, sans-serif;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+}
