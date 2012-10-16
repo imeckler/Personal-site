@@ -1,0 +1,6 @@
+{ "feedTitle": "Izaak Meckler's Blog",
+  "feedAuthors": "Izaak Meckler <izaakmeckler@me.com>",
+  "baseURL": "/",
+  "siteURL": "http://www.izaakmeckler.com",
+  "icon": "/static/icon.png"
+}

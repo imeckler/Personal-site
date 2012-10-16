@@ -36,8 +36,10 @@ body {
 
 .content {
     display: inline-block;
+    width: 500px;
     height: 400px;
     font: 18px/27px 'CabinRegular', Arial, sans-serif;
+    padding-left: 60px;
 }
 
 #nav .active {
@@ -46,7 +48,7 @@ body {
 
 #nav {
     padding-right: 30px;
-    border-right: 2px solid black;
+    border-right: 2px solid #646464;
 }
 
 #footer {
@@ -58,4 +60,16 @@ body {
 #footer a {
     text-decoration: none;
     color: black;
+}
+
+.blog-heading {
+    font: 22px/22px 'ColaborateThinRegular', Arial, sans-serif;
+}
+
+.post-heading {
+    font: 22px/22px 'CabinBold', Arial, sans-serif;
+}
+
+.post-content {
+    font:14px 'ColaborateThinRegular', Arial, sans-serif;
 }

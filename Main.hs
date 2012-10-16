@@ -10,11 +10,15 @@ import Snap.Util.FileServe
 import Snap.Snaplet
 import Snap.Snaplet.Heist
 import Text.Templating.Heist
+import Snap.StaticPages
 import Data.ByteString.Char8 (pack)
 
 import Debug.Trace
 
-data App = App { _heist :: Snaplet (Heist App) }
+data App = App
+    { _heist     :: Snaplet (Heist App)
+    , _blog      :: Snaplet StaticPages
+    }
 
 makeLenses [''App]
 
@@ -23,10 +27,12 @@ instance HasHeist App where heistLens = subSnaplet heist
 appInit :: SnapletInit App App
 appInit = makeSnaplet "personal-site" "" Nothing $ do
     hs <- nestSnaplet "" heist $ heistInit "templates"
-    addRoutes [ ("/fun", method POST locationHandler) 
+    bs <- nestSnaplet "blog" blog $ staticPagesInit "blogdata"
+    addRoutes [ ("/fun", method POST locationHandler)
+              , ("static", serveDirectory "static") 
               ]
-    wrapHandlers $ (<|> serveDirectory ".")
-    return $ App hs
+
+    return $ App hs bs
 
 main = serveSnaplet defaultConfig appInit
 

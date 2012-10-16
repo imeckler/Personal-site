@@ -1,0 +1,20 @@
+#!/bin/bash
+
+year=$(date +"%Y")
+month=$(date +"%m")
+day=$(date +"%d")
+
+datestr=$(date +"%Y-%m-%dT%T%z")
+
+postdir="blogdata/content/$year/$month/$day"
+postpath="$postdir/$1.md"
+mkdir -p $postdir
+
+header="| title: $1
+| author: Izaak Meckler <izaakmeckler@me.com>
+| published: $datestr
+| updated: $datestr"
+
+echo "$header" >> $postpath
+
+vim $postpath
