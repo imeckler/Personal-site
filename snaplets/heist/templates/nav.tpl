@@ -1,7 +1,7 @@
 <div id="nav" class="nav">
     <ul class="nav">
-        <li class="home">
-            <a href="/">Home</a>
+        <li class="blog">
+            <a href="/blog">Blog</a>
         </li>
         <li class="about">
             <a href="/about">About</a>

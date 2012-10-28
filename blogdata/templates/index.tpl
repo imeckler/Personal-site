@@ -21,7 +21,7 @@
     <posts:next3>
       <div class="post">
         <div class="title">
-          <h3><a href="${post:url}"><post:title/></a> <span class="date"><post:date/></span></h3>
+          <h3><a href="/blog${post:url}"><post:title/></a> <span class="date"><post:date/></span></h3>
         </div>
       </div>
     </posts:next3>

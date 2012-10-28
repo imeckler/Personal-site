@@ -3,7 +3,7 @@ body {
 }
 
 #main {
-    width: 800px;
+    width: 900px;
     background-color: #EBEBEC;
     margin-left: auto;
     margin-right: auto;
@@ -36,9 +36,9 @@ body {
 
 .content {
     display: inline-block;
-    width: 500px;
-    height: 400px;
-    font: 18px/27px 'CabinRegular', Arial, sans-serif;
+    width: 600px;
+    min-height: 400px;
+    font:14px 'ColaborateThinRegular', Arial, sans-serif;
     padding-left: 60px;
 }
 
@@ -70,6 +70,37 @@ body {
     font: 22px/22px 'CabinBold', Arial, sans-serif;
 }
 
+.post .title {
+    margin-bottom: -10px;
+    font: 14px 'CabinBold', Arial, sans-serif;
+}
+
+.post .title a {
+    text-decoration: underline;
+    color: black;
+}
+
 .post-content {
     font:14px 'ColaborateThinRegular', Arial, sans-serif;
+}
+
+.crumb-title {
+    font: 12px 'CabinRegular', Arial, sans-serif;
+}
+
+.crumb-title a {
+    color: black;
+}
+
+.content-p {
+    padding-left: 20px;
+    font:16px 'ColaborateThinRegular', Arial, sans-serif;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }

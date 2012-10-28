@@ -29,7 +29,7 @@ appInit = makeSnaplet "personal-site" "" Nothing $ do
     hs <- nestSnaplet "" heist $ heistInit "templates"
     bs <- nestSnaplet "blog" blog $ staticPagesInit "blogdata"
     addRoutes [ ("/fun", method POST locationHandler)
-              , ("static", serveDirectory "static") 
+              , ("static", serveDirectory "static")
               ]
 
     return $ App hs bs

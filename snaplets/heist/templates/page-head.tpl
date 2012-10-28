@@ -8,8 +8,10 @@
     <link href="/static/css/main.css" rel="stylesheet" />
     <link href="/static/css/font/cabin.css" rel="stylesheet" />
     <link href="/static/css/font/colaborate.css" rel="stylesheet" />
+    <link href="/static/lib/google-code-prettify/prettify.css" rel="stylesheet" />
     <script type="text/javascript" src="/static/js/jquery.url.packed.js"></script>
     <script type="text/javascript" src="/static/js/init.js"></script>
+    <script type="text/javascript" src="/static/lib/google-code-prettify/prettify.js"></script>
     <script type="text/javascript">
         function initialize() {
             navigator.geolocation.getCurrentPosition(function (loc) {

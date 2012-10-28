@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <apply template="page-head"/>
-    <body onload="initialize()">
+    <body onload="initialize();prettyPrint();">
         <div id="main">
             <apply template="nav"/>
             <content />
@@ -9,4 +9,5 @@
         <div id="footer">
             © 2012 Izaak Meckler
         </div>
+    </body>
 </html>
