@@ -8,7 +8,7 @@
     <h2 class="blog-heading">Latest post</h2>
 
     <posts:latest>
-      <div class="most-recent-post">
+      <div class="main-post">
         <h3><a href="/blog${post:url}"><post:title/></a></h3>
         <div class="post-content">
           <post:content/>
