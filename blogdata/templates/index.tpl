@@ -9,7 +9,7 @@
 
     <posts:latest>
       <div class="most-recent-post">
-        <h3 class="post-heading"><post:title/></h3>
+        <h3><a href="/blog${post:url}"><post:title/></a></h3>
         <div class="post-content">
           <post:content/>
         </div>

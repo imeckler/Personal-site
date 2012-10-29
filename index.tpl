@@ -1,3 +1,2 @@
 <apply template="page">
-
 </apply>

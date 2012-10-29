@@ -30,6 +30,7 @@ appInit = makeSnaplet "personal-site" "" Nothing $ do
     bs <- nestSnaplet "blog" blog $ staticPagesInit "blogdata"
     addRoutes [ ("/fun", method POST locationHandler)
               , ("static", serveDirectory "static")
+              , ("/", redirect "blog")
               ]
 
     return $ App hs bs
