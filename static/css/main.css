@@ -55,6 +55,7 @@ body {
     text-align: center;
     padding-top: 13px;
     font: 14px/14px 'ColaborateLightRegular', Arial, sans-serif;
+    /*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
 }
 
 #footer a {

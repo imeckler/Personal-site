@@ -21,5 +21,15 @@
                 }
             );
         }
+        function setBackground() {
+            bgs = [
+                'static/images/background/fabric1small.jpg',
+                'static/images/background/fabric2.jpg'
+            ];
+            $('body').css(
+                'background-image', 
+                'url(' + bgs[Math.floor(Math.random() * bgs.length)] + ')'
+            )
+        }
     </script>
 </head>  
