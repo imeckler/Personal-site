@@ -62,12 +62,12 @@ body {
     color: black;
 }
 
-.most-recent-post a {
+.main-post a {
     text-decoration: none;
     color: black;
 }
 
-.most-recent-post h3 {
+.main-post h3 {
     font: 22px/22px 'CabinBold', Arial, sans-serif;
 }
 

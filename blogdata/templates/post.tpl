@@ -1,9 +1,9 @@
 <bind tag="subtitle">: Blog: <post:title/></bind>
 <apply template="page">
 
-  <div id="blog-post">
+  <div id="blog-post" class="main-post">
 
-    <h2 class="crumb-title">
+    <!-- <h2 class="crumb-title">
       <span itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
         <a itemprop="url" href="/blog"><span itemprop="title">Blog</span></a>
       </span>
@@ -11,9 +11,10 @@
       <span itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
         <a itemprop="url" href="#"><span itemprop="title"><post:title/></span></a>
       </span>
-    </h2>
+    </h2> -->
 
     <div class="post-meta">
+      <h3><post:title/></h3>
       <div class="post-date"><post:date/></div>
       <div class="post-summary"><post:summary/></div>
     </div>
