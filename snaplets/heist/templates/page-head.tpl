@@ -1,7 +1,6 @@
 <head>
     <title>Izaak Meckler<subtitle/></title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <meta name="author" content="Izaak Meckler"/>
     <meta name="description" content="The personal site of Izaak Meckler"/>
     <meta charset="UTF-8"/>
@@ -13,14 +12,6 @@
     <script type="text/javascript" src="/static/js/init.js"></script>
     <script type="text/javascript" src="/static/lib/google-code-prettify/prettify.js"></script>
     <script type="text/javascript">
-        function initialize() {
-            navigator.geolocation.getCurrentPosition(function (loc) {
-                    $.post('fun', loc.coords, function(data){
-                        console.log(data);
-                    });
-                }
-            );
-        }
         function setBackground() {
             bgs = [
                 'static/images/background/fabric1small.jpg',
