@@ -13,6 +13,8 @@ import Snap.Snaplet.Session
 import Text.Templating.Heist
 import Snap.StaticPages
 import qualified Data.ByteString.Char8 as B
+import qualified Data.ByteString.Lazy as LB
+import Data.Aeson (encode)
 
 import Debug.Trace
 
@@ -39,15 +41,18 @@ appInit = makeSnaplet "personal-site" "" Nothing $ do
     hs <- nestSnaplet "" heist $ heistInit "templates"
     bs <- nestSnaplet "blog" blog $ staticPagesInit "blogdata"
     --sess <- nestSnaplet 
-    addRoutes [ ("/fun", method POST locationHandler)
-              , ("static", serveDirectory "static")
+    addRoutes [ ("static", serveDirectory "static")
               , ("/", redirect "blog")
+              , ("/mood", method POST moodPostHandler)
               ]
 
     return $ App hs bs
 
 main = serveSnaplet defaultConfig appInit
 
-locationHandler = do
-    postParams <- rqPostParams <$> getRequest
-    logError . B.pack . show $ postParams
+writeMoodData :: Params -> IO () 
+writeMoodData = LB.appendFile "log/mood.txt" . (`LB.append` "\n") . encode
+
+moodPostHandler = do
+    postParams <- rqQueryParams <$> getRequest
+    liftIO $ writeMoodData postParams
