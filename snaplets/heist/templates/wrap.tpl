@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <apply template="page-head"/>
-    <body onload="setBackground();prettyPrint();">
+    <body onload="setBackground();">
         <div id="main">
             <apply template="nav"/>
             <content />
