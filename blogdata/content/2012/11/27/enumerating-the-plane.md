@@ -1,4 +1,4 @@
-| title: Haskell for mathematical exploration
+| title: Haskell for mathematical exploration (Part 1)
 | author: Izaak Meckler <izaakmeckler@me.com>
 | published: 2012-10-28T13:31:46-0500
 | updated: 2012-10-28T13:31:46-0500
@@ -60,3 +60,4 @@ integerLattice :: [(Integer, Integer)]
 integerLattice = feed (0, 0) . concat . zipWith replicate runs $ cycle [up, right, left, down]
 </pre>
 
+Now that we have the object at our disposal, we can easily explore some of its interesting properties. I will discuss these in an upcoming post.
