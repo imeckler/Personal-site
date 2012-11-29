@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <apply template="page-head"/>
-    <body onload="setBackground();">
+    <body onload="setBackground();sh_highlightDocument();">
         <div id="main">
             <apply template="nav"/>
             <content />

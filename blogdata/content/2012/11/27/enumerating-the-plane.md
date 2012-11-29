@@ -50,3 +50,13 @@ down  = second (subtract 1)
 right = first (+ 1)
 left  = first (subtract 1)
 </pre>
+
+<pre class="sh_haskell">
+feed :: a -> [a -> a] -> [a]
+feed x []     = [x]
+feed x (f:fs) = x : feed (f x) fs
+
+integerLattice :: [(Integer, Integer)]
+integerLattice = feed (0, 0) . concat . zipWith replicate runs $ cycle [up, right, left, down]
+</pre>
+
