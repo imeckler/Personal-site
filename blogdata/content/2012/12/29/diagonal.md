@@ -9,10 +9,10 @@ At some point in the near future I'll come back to the enumeration of the intege
 appTermsOfType t :: Type -> [[[Term]]]
 appTermsOfType t = [ 
 	[
-		[App f x | f <- termsOfType (AbsTy a t)] 
-		| x <- termsOfType a
+		[App f x | f &lt;- termsOfType (AbsTy a t)] 
+		| x &lt;- termsOfType a
 	]
-	| a <- allTypes 
+	| a &lt;- allTypes 
 ]
 </pre>
 
@@ -31,7 +31,7 @@ diagonalize = go []
     where go active (y:yys) = map head active ++ go (y : map tail active) yys
 
 rationalTable :: [[(Integer, Integer)]]
-rationalTable = [[(n, d) | n <- [1..]] | d <- [1..]]
+rationalTable = [[(n, d) | n &lt;- [1..]] | d &lt;- [1..]]
 
 rationalList :: [(Integer, Integer)]
 rationalList = diagonalize rationalTable
