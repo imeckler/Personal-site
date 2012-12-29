@@ -8,7 +8,7 @@
     <link href="/static/css/main.css" rel="stylesheet" />
     <link href="/static/css/font/cabin.css" rel="stylesheet" />
     <link href="/static/css/font/colaborate.css" rel="stylesheet" />
-    <link href="http://shjs.sourceforge.net/sh_style.min.css" rel="stylesheet" />
+    <link href="/static/css/prettycode.css" rel="stylesheet" />
     <script type="text/javascript" src="/static/js/jquery.url.packed.js"></script>
     <script type="text/javascript" src="/static/js/init.js"></script>
     <script type="text/javascript" src="/static/js/sh_main.min.js"></script>
