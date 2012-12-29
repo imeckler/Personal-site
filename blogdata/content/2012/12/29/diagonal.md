@@ -39,8 +39,8 @@ rationalList = diagonalize rationalTable
 
 We keep a list of "active" sublists. That is, lists that have an element on the diagonal currently under consideration. In the case of the rational numbers, on the first (non-trivial) run of `go`, we are considering the first diagonal and so the `active` list contains the only list that has an element on this diagonal. On the nth iteration, we consider the nth diagonal, which has elements from the first n lists. The key to how the function works is in the observation that the nth diagonal can correspond to `map head active`, if we have been "shifting" all the currently active lists to the left before the next iteration.
 
-The table below demonstrates the first three iterations of `go [] rationalTable`.
+The table below demonstrates the behavior of `go [] rationalTable` for the first few iterations.
 
 <div class="image-box">
-	<img src="/static/images/blog/diagonal.png">
+	<img src="/static/images/blog/diagonal.png" style="width: 600px;">
 </div>
