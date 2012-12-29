@@ -6,8 +6,8 @@
 At some point in the near future I'll come back to the enumeration of the integer lattice, and how to compute what a move in the plane corresponds to as a change in indices in the enumeration. For now, I just want to share a beautiful function I wrote in the process of writing a theorem prover (the logical calculus in question being natural deduction, realized as the simply typed lambda calculus). I wanted to generate all terms of a certain type, say \\(T\\). The top level of a term of this type might be an application of some term \\(f : A \\to T\\) to a term \\(x : A\\), where \\(A\\) ranges over all possible types. To generate all such terms requires in some way iterating over all types \\(A\\), all terms \\(x : A\\), and all terms \\(f : A \\to T\\). In Haskell, something along the lines of
 
 <pre class="prettyprint sh_haskell">
-appTermsOfType t :: Type -> [[[Term]]]
-appTermsOfType t = [ 
+appTermsOfTypeN t :: Type -> [[[Term]]]
+appTermsOfTypeN t = [ 
 	[
 		[App f x | f &lt;- termsOfType (AbsTy a t)] 
 		| x &lt;- termsOfType a
@@ -16,7 +16,7 @@ appTermsOfType t = [
 ]
 </pre>
 
-Hopefully the indentation helps make the structure clearer. `appTermsOfType t` is a list, indexed by a type `a`, of lists, each indexed by a term `x` of type `a`, of lists of every possible function `f` of type `a -> t` applied to `x`. What we want to do is turn this nested structure into a single flat list of all the terms in each sub-sublist. If we do the obvious thing and do something like `concat . concat $ appTermsOfType t`, there will be infinitely many terms in some sub-sublist that the new flat list will not contain, since there are infinitely many types, and we will get stuck enumerating terms of the first infinite type we encounter in `allTypes`, never enumerating terms of the rest of the types. A correct thing to do here is to iterate over the sublists along the "diagonals", just as in one proof of the equinumerosity of \\(\\mathbb{N}\\) and \\(\\mathbb{Q}^2\\).
+Hopefully the indentation helps make the structure clearer. `appTermsOfTypeN t` is a list, indexed by a type `a`, of lists, each indexed by a term `x` of type `a`, of lists of every possible function `f` of type `a -> t` applied to `x`. What we want to do is turn this nested structure into a single flat list of all the terms in each sub-sublist. If we do the obvious thing and do something like `concat . concat $ appTermsOfType t`, there will be infinitely many terms in some sub-sublist that the new flat list will not contain, since there are infinitely many types, and we will get stuck enumerating terms of the first infinite type we encounter in `allTypes`, never enumerating terms of the rest of the types. A correct thing to do here is to iterate over the sublists along the "diagonals", just as in one proof of the equinumerosity of \\(\\mathbb{N}\\) and \\(\\mathbb{Q}^2\\).
 
 
 <div class="image-box">
@@ -44,3 +44,10 @@ The table below demonstrates the behavior of `go [] rationalTable` for the first
 <div class="image-box">
 	<img src="/static/images/blog/diagonal.png" style="width: 600px;">
 </div>
+
+With `diagonalize`, a flat list of terms of a given type, where every possible term appears at some finite position in the list, can be computed as follows.
+
+<pre class="prettyprint sh_haskell">
+appTermsOfType :: Type -> [Term]
+appTermsOfType = diagonalize . diagonalize . appTermsOfTypeN
+</pre>
