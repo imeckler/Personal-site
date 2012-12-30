@@ -1,7 +1,7 @@
 | title: Haskell for mathematical exploration (Part 1)
 | author: Izaak Meckler <izaakmeckler@me.com>
-| published: 2012-10-28T13:31:46-0500
-| updated: 2012-10-28T13:31:46-0500
+| published: 2012-11-27T13:31:46-0500
+| updated: 2012-11-27T13:31:46-0500
 
 For a recent assignment, I had to show the equivalence of Turing machines with a tape infinite in one direction and Turing machines with a two dimensional tape, infinite in all directions, that are able to move up, down, left, or right. The first thing that came to mind was to associate each point in \\(\\mathbb{Z}^2\\) with a natural number as in this picture:
 
