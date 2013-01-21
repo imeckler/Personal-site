@@ -1,10 +1,10 @@
 body {
-    background-color: #8A8C8E;
+    background-color: #9FBACF;
 }
 
 #main {
     width: 900px;
-    background-color: #EBEBEC;
+    background-color: white;
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
@@ -63,15 +63,23 @@ body {
     color: black;
 }
 
-.main-post a {
-    text-decoration: none;
+.post-content {
+    font:14px 'ColaborateThinRegular', Arial, sans-serif;
+}
+
+.post-content a {
+    text-decoration: underline;
     color: black;
 }
 
-.main-post h3 {
+.post-title {
     font: 22px/22px 'CabinBold', Arial, sans-serif;
 }
 
+.post-title a {
+    text-decoration: none;
+    color: black;
+}
 
 .blog-heading {
     font: 22px/22px 'ColaborateThinRegular', Arial, sans-serif;
@@ -89,10 +97,6 @@ body {
 .post .title a {
     text-decoration: underline;
     color: black;
-}
-
-.post-content {
-    font:14px 'ColaborateThinRegular', Arial, sans-serif;
 }
 
 .crumb-title {
@@ -114,4 +118,10 @@ pre {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+}
+
+
+blockquote {
+    border-left: 3px solid #CCC;
+    padding-left: 15px;
 }

@@ -13,16 +13,18 @@
     <script type="text/javascript" src="/static/js/init.js"></script>
     <script type="text/javascript" src="/static/js/sh_main.min.js"></script>
     <script type="text/javascript" src="/static/js/sh_haskell.min.js"></script>
-    <script type="text/javascript">
-        function setBackground() {
-            bgs = [
-                '/static/images/background/fabric1small.jpg',
-                // '/static/images/background/fabric2.jpg'
-            ];
-            $('body').css(
-                'background-image', 
-                'url(' + bgs[Math.floor(Math.random() * bgs.length)] + ')'
-            )
-        }
-    </script>
-</head>  
+    <ignore>
+        <script type="text/javascript">
+            /*function setBackground() {
+                bgs = [
+                    '/static/images/background/fabric1small.jpg',
+                    // '/static/images/background/fabric2.jpg'
+                ];
+                $('body').css(
+                    'background-image', 
+                    'url(' + bgs[Math.floor(Math.random() * bgs.length)] + ')'
+                )
+            }*/
+        </script>
+    </ignore>
+</head>
